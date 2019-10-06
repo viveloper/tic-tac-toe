@@ -1,14 +1,14 @@
 import React from 'react'
 
 export default function Square(props) {
-  const squareStyle = {
+  const winSquareStyle = {
     background: 'grey'
   }
   return (
     <button
       className="square"
       onClick={() => { props.onSquareClick(props.index) }}
-      style={props.isWinSquare ? squareStyle : {}}
+      style={props.isWinSquare ? winSquareStyle : null}
     >{props.square}</button>
   );
 }

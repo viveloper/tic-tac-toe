@@ -33,7 +33,7 @@ export default function Game() {
 
   // write move button
   const moves = history.map((squares, index) => {
-    const buttonStyle = {
+    const selectedButtonStyle = {
       fontWeight: 'bold',
       color: 'blue'
     }
@@ -41,7 +41,7 @@ export default function Game() {
       <li key={index}>
         <button
           onClick={() => { handleMoveClick(index) }}
-          style={index === currentHistoryIndex ? buttonStyle : {}}
+          style={index === currentHistoryIndex ? selectedButtonStyle : null}
         >{index === 0 ? 'Go to game start' : `Go to move #${index}`}</button>
       </li>
     );
